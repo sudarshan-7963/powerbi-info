@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI - Connection Errors Report Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+        
+        .link-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+        }
+        
+        .link-button:hover {
+            background-color: #0056b3;
+        }
+        
+        .info-box {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e7f3ff;
+            border-left: 4px solid #007bff;
+            border-radius: 4px;
+        }
+        
+        .info-box.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .info-box h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        
+        .info-box p {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .info-box h4 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Connection Errors Report - Information</h1>
+        <p style="color: #666;">This page shows all the errors in connection file</p>
+        
+        <a href="#" class="link-button" onclick="showInfo(event)">
+            Click Here for Report Details
+        </a>
+        
+        <div id="infoBox" class="info-box">
+            <h2>📊 Power BI Report: Connection Errors Dashboard</h2>
+            
+            <div style="margin-bottom: 20px; padding: 15px; background-color: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                <h3 style="color: #155724; margin-top: 0;">ℹ️ About This Report:</h3>
+                <p style="color: #155724; margin: 0; line-height: 1.8;">
+                    This Power BI dashboard provides a comprehensive view of all <strong>connection errors</strong> occurring in the system. 
+                    The report helps identify patterns, track error trends, and pinpoint problem areas across different service lines and customers.
+                </p>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h3 style="color: #0066cc; margin-bottom: 10px;">📈 Report Sections & Visualizations:</h3>
+                
+                <div style="margin-left: 15px; margin-top: 15px;">
+                    <h4 style="color: #d9534f; margin-bottom: 8px;">1️⃣ Errors by Service Line</h4>
+                    <p style="margin-left: 20px; line-height: 1.8;">
+                        Shows the distribution of connection errors across different service lines or business units. 
+                        Helps identify which service line is experiencing the most connectivity issues.
+                    </p>
+                    
+                    <h4 style="color: #d9534f; margin-bottom: 8px; margin-top: 15px;">2️⃣ Errors by Customer</h4>
+                    <p style="margin-left: 20px; line-height: 1.8;">
+                        Shows which customer has how many errors. 
+                        Displays the error count for each customer to identify which customers are experiencing the most connection issues.
+                    </p>
+                    
+                    <h4 style="color: #d9534f; margin-bottom: 8px; margin-top: 15px;">3️⃣ Error Types</h4>
+                    <p style="margin-left: 20px; line-height: 1.8;">
+                        Breaks down the specific types of connection errors occurring (e.g., timeout, authentication failed, network unreachable, database connection error, etc.). 
+                        Helps understand the root cause of connection issues.
+                    </p>
+                    
+                    <h4 style="color: #d9534f; margin-bottom: 8px; margin-top: 15px;">4️⃣ Error Count</h4>
+                    <p style="margin-left: 20px; line-height: 1.8;">
+                        Total number of connection errors over a specified time period. 
+                        Provides a quick metric to assess the overall health of system connections.
+                    </p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 15px; background-color: #e7f3ff; border-left: 4px solid #007bff; border-radius: 4px;">
+                <h3 style="color: #004085; margin-top: 0;">📋 Key Metrics Displayed:</h3>
+                <ul style="color: #004085; line-height: 1.8;">
+                    <li><strong>Total Error Count:</strong> Overall number of connection failures</li>
+                    <li><strong>Errors by Service Line:</strong> Breakdown by department or service area</li>
+                    <li><strong>Errors by Customer:</strong> Shows which customer has how many errors</li>
+                    <li><strong>Error Type Distribution:</strong> Categories of connection errors</li>
+                    <li><strong>Trend Analysis:</strong> Error patterns over time</li>
+                    <li><strong>Error Severity:</strong> Critical, Warning, or Informational level</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 15px; background-color: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px;">
+                <h3 style="color: #856404; margin-top: 0;">🎯 How to Use This Dashboard:</h3>
+                <ol style="color: #856404; line-height: 1.8;">
+                    <li><strong>Filter by Service Line:</strong> Click on any service line to drill down into specific errors</li>
+                    <li><strong>Filter by Customer:</strong> Select a customer to view their connection issues</li>
+                    <li><strong>Analyze Error Types:</strong> Identify the most common error categories</li>
+            
+                </ol>
+            </div>
+            
+            
+            <div style="margin-top: 25px; padding: 15px; background-color: #e8f4f8; border-radius: 4px;">
+                <h3 style="color: #0c5460; margin-top: 0;">💡 What The Report Shows:</h3>
+                <p style="color: #0c5460; line-height: 1.8;">
+                    The Power BI report visualizes connection errors in an easy-to-understand format with charts and graphs showing:
+                </p>
+                <ul style="color: #0c5460; line-height: 1.8;">
+                    <li>Which service lines have the highest error counts</li>
+                    <li>Displays a breakdown of customers with their error counts</li>
+                    <li>What types of errors are occurring most frequently</li>
+                </ul>
+            </div>
+            
+            <p style="margin-top: 20px;"><strong>📞 Support Contact:</strong> aminuddin.siddiqui@kpn.com</p>
+            <p><strong>📅 Last Updated:</strong> November 23, 2025</p>
+            <p><strong>🔄 Data Refresh:</strong> Report data refreshes every day</p>
+           
+        </div>
+    </div>
+    
+    <script>
+        function showInfo(event) {
+            event.preventDefault();
+            const infoBox = document.getElementById('infoBox');
+            infoBox.classList.toggle('active');
+            
+            // Change button text
+            const button = event.target;
+            if (infoBox.classList.contains('active')) {
+                button.textContent = 'Hide Report Details';
+            } else {
+                button.textContent = 'Click Here for Report Details';
+            }
+        }
+    </script>
+</body>
+</html>
